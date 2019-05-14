@@ -2,6 +2,7 @@
   <div class="nav" :class="$mq">
     <v-container fill-height class="px-0 py-2">
       <v-layout column wrap align-center justify-start>
+        <!-- <v-flex xs1> &nbsp; </v-flex> -->
         <v-btn
           v-for="link in links"
           :key="link.name"

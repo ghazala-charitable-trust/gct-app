@@ -3,6 +3,7 @@
     <div class="website-container">
       <website-nav-bar />
       <v-content class="website-content" :class="$mq">
+        <top-header />
         <nuxt />
       </v-content>
     </div>
@@ -12,11 +13,13 @@
 
 <script>
 import WebsiteNavBar from '@/components/WebsiteNavBar'
+import TopHeader from '@/components/utils/topHeader'
 import WebsiteFooter from '@/components/WebsiteFooter'
 
 export default {
   components: {
     WebsiteNavBar,
+    TopHeader,
     WebsiteFooter
   }
 }
