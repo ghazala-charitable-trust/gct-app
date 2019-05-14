@@ -15,7 +15,7 @@
         >
           <font-awesome-icon rotation="90" size="lg" :icon="link.icon" />
           &nbsp;
-          <span class="nav-text" :class="$mq">
+          <span class="text-uppercase nav-text" :class="$mq">
             {{ link.name }}
           </span>
         </v-btn>
@@ -50,14 +50,14 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .nav {
   /* background-color: $shades.abyss */
-  background: -moz-linear-gradient(bottom, #ef2424 0%, #ffe000 100%);
+  background: -moz-linear-gradient(bottom, $shades.red 0%, $shades.yellow 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(bottom, #ef2424 0%, #ffe000 100%);
+  background: -webkit-linear-gradient(bottom, $shades.red 0%, $shades.yellow 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ef2424 0%, #ffe000 100%);
+  background: linear-gradient(to bottom, $shades.red 0%, $shades.yellow 100%);
 
   height: 100vh;
   position: fixed;
@@ -89,7 +89,6 @@ export default {
 
 .nav-text {
   // font-weight: bold;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
 
   &.phone {

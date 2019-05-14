@@ -4,9 +4,9 @@ import colors from 'vuetify/es5/util/colors'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: colors.red.base,
+    primary: '#ef2424', // red
     accent: colors.grey.darken3,
-    secondary: colors.yellow.accent2,
+    secondary: '#ffe000', // yellow
     info: colors.teal.lighten1,
     warning: colors.amber.base,
     error: colors.deepOrange.accent4,

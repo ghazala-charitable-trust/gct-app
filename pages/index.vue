@@ -1,7 +1,7 @@
 <template>
   <v-container fluid fill-height>
-    <v-layout align-center justify-center>
-      <h1>Home Page</h1>
+    <v-layout align-center justify-center row>
+      <v-flex xs3 class="primary--text display-2">Home Page</v-flex>
     </v-layout>
   </v-container>
 </template>
