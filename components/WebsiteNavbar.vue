@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="nav" :class="$mq">
     <v-container fill-height class="px-0 py-2">
       <v-layout column wrap align-center justify-start>
         <v-btn
@@ -12,9 +12,14 @@
           depressed
           nuxt
         >
-          <font-awesome-icon rotation="90" class="nav-text" :icon="link.icon" />
+          <font-awesome-icon
+            rotation="90"
+            class="nav-text"
+            :class="$mq"
+            :icon="link.icon"
+          />
           &nbsp;
-          <span class="nav-text">
+          <span class="nav-text" :class="$mq">
             {{ link.name }}
           </span>
         </v-btn>
@@ -49,7 +54,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus">
 .nav {
   /* background-color: $shades.abyss */
   background: -moz-linear-gradient(bottom, #ef2424 0%, #ffe000 100%);
@@ -62,8 +67,17 @@ export default {
   position: fixed;
   left: 0;
   z-index: 3000;
-  width: 6%;
-  max-width: 6vh;
+
+  min-width: 30px;
+  max-width: 60px;
+
+  &.phone {
+     width: 12%;
+  }
+  &.desktop {
+    width: 6%;
+  }
+
 }
 
 .nav-link {
@@ -78,11 +92,16 @@ export default {
 }
 
 .nav-text {
-  font-size: 20px;
-  /* margin-left: 17px; */
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+
+  &.phone {
+    font-size: 14px;
+  }
+  &.desktop {
+    font-size: 20px;
+  }
 }
 
 .nav-link-active {

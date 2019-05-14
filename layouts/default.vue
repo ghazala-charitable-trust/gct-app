@@ -2,7 +2,7 @@
   <v-app>
     <div class="website-container">
       <website-nav-bar />
-      <v-content class="website-content">
+      <v-content class="website-content" :class="$mq">
         <nuxt />
       </v-content>
     </div>
@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="stylus">
 .website-container {
   min-height: 100vh;
   position: relative;
@@ -32,20 +32,14 @@ export default {
 
 .website-content {
   min-height: 100vh;
-  width: 94%;
-  margin-left: 6%;
-}
 
-@media screen and (max-width: 800px) {
-  .nav {
-    width: 12%;
-  }
-  .website-content {
+  &.phone {
     margin-left: 12%;
     width: 88%;
   }
-  .nav-text {
-    font-size: 10px !important;
+  &.desktop {
+    width: 94%;
+    margin-left: 6%;
   }
 }
 </style>
