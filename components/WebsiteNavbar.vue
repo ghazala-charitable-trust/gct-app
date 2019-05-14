@@ -1,28 +1,18 @@
 <template>
-  <v-toolbar
-    absolute
-    color="teal lighten-3"
-    dark
-    scroll-off-screen
-    scroll-target="#scrolling-techniques"
-  >
-    <v-toolbar-side-icon></v-toolbar-side-icon>
-
-    <v-toolbar-title :to="home">{{ $t('title') }}</v-toolbar-title>
+  <v-toolbar fixed color="transparent" dark app>
+    <v-toolbar-title class="black--text showPointer" :to="home">{{
+      $t('title')
+    }}</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
-    <v-btn icon>
-      <v-icon>search</v-icon>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon>favorite</v-icon>
-    </v-btn>
-
-    <v-btn icon>
-      <v-icon>more_vert</v-icon>
-    </v-btn>
+    <v-toolbar-items class="hidden-sm-and-up">
+      <v-btn class="black--text" :to="about" flat>{{
+        $t('navbar.about')
+      }}</v-btn>
+      <v-btn class="black--text" flat>Link Two</v-btn>
+      <v-btn class="black--text" flat>Link Three</v-btn>
+    </v-toolbar-items>
   </v-toolbar>
 </template>
 
@@ -30,10 +20,17 @@
 export default {
   computed: {
     home() {
-      // eslint-disable-next-line no-console
-      console.log(this.localePath('index'))
       return this.localePath('index')
+    },
+    about() {
+      return this.localePath('about')
     }
   }
 }
 </script>
+
+<style>
+.showPointer {
+  cursor: pointer;
+}
+</style>

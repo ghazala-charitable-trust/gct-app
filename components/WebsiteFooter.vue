@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark height="auto">
+  <v-footer absolute dark app>
     <v-card class="flex" flat tile>
       <v-card-title class="teal">
         <strong class="subheading">{{ $t('footer.subtitle') }}</strong>
@@ -18,8 +18,8 @@
       </v-card-title>
 
       <v-card-actions class="grey darken-3 justify-center">
-        &copy;2019 —
-        <strong>Ghazala Charitable Trust</strong>
+        &copy;{{ $t('footer.trademark.year') }} — &nbsp;
+        <strong>{{ $t('footer.trademark.name') }}</strong>
       </v-card-actions>
     </v-card>
   </v-footer>

@@ -1,9 +1,20 @@
+const name = 'Ghazala Charitable Trust'
+
 const messages = {
-  title: 'Ghazala Charitable Trust',
+  title: name,
+
+  navbar: {
+    about: 'about'
+  },
 
   footer: {
-    subtitle: 'Get connected with us on social networks!'
+    subtitle: 'Get connected with us on social networks!',
+    trademark: {
+      year: '2019',
+      name
+    }
   },
+
   pages: {
     home: 'Home',
     contacts: 'Contacts'
