@@ -11,13 +11,9 @@
           flat
           depressed
           nuxt
+          justify-center
         >
-          <font-awesome-icon
-            rotation="90"
-            class="nav-text"
-            :class="$mq"
-            :icon="link.icon"
-          />
+          <font-awesome-icon rotation="90" size="lg" :icon="link.icon" />
           &nbsp;
           <span class="nav-text" :class="$mq">
             {{ link.name }}
@@ -72,10 +68,10 @@ export default {
   max-width: 60px;
 
   &.phone {
-     width: 12%;
+     width: 30px;
   }
   &.desktop {
-    width: 6%;
+    width: 60px;
   }
 
 }
@@ -92,9 +88,9 @@ export default {
 }
 
 .nav-text {
-  font-weight: bold;
+  // font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
 
   &.phone {
     font-size: 14px;

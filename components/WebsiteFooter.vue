@@ -1,27 +1,32 @@
 <template>
-  <v-footer absolute dark app>
-    <v-card class="flex" flat tile>
-      <v-card-title class="teal">
-        <strong class="subheading">{{ $t('footer.subtitle') }}</strong>
+  <v-footer dark fluid height="auto" class="footer" :class="$mq">
+    <v-layout fluid class="pa-0 ma-0">
+      <v-flex fluid>
+        <v-card flat class="white--text text-xs-center">
+          <v-card-text>
+            <v-btn
+              v-for="(icon, index) in icons"
+              :key="index"
+              class="mx-2 white--text"
+              icon
+            >
+              <font-awesome-icon size="lg" :icon="icon" />
+            </v-btn>
+          </v-card-text>
 
-        <v-spacer></v-spacer>
+          <v-card-text class="white--text pt-0">
+            {{ $t('footer.information') }}
+          </v-card-text>
 
-        <v-btn
-          v-for="(icon, index) in icons"
-          :key="index"
-          class="mx-3"
-          dark
-          icon
-        >
-          <font-awesome-icon size="lg" :icon="icon" />
-        </v-btn>
-      </v-card-title>
+          <v-divider></v-divider>
 
-      <v-card-actions class="grey darken-3 justify-center">
-        &copy;{{ $t('footer.trademark.year') }} — &nbsp;
-        <strong>{{ $t('footer.trademark.name') }}</strong>
-      </v-card-actions>
-    </v-card>
+          <v-card-text class="white--text">
+            &copy;{{ $t('footer.trademark.year') }} — &nbsp;
+            <strong>{{ $t('footer.trademark.name') }}</strong>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
   </v-footer>
 </template>
 
@@ -40,3 +45,14 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+.footer {
+  &.phone {
+    margin-left: 30px;
+  }
+  &.desktop {
+    margin-left: 60px;
+  }
+}
+</style>

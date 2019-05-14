@@ -12,13 +12,11 @@
 
 <script>
 import WebsiteNavBar from '@/components/WebsiteNavBar'
-// import Navigation from '@/components/Navigation'
 import WebsiteFooter from '@/components/WebsiteFooter'
 
 export default {
   components: {
     WebsiteNavBar,
-    // Navigation,
     WebsiteFooter
   }
 }
@@ -34,12 +32,10 @@ export default {
   min-height: 100vh;
 
   &.phone {
-    margin-left: 12%;
-    width: 88%;
+    margin-left: 30px;
   }
   &.desktop {
-    width: 94%;
-    margin-left: 6%;
+    margin-left: 60px;
   }
 }
 </style>
