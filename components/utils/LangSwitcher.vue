@@ -1,5 +1,5 @@
 <template>
-  <span class="lang-switcher">
+  <!-- <span class="lang-switcher">
     <nuxt-link
       v-for="(locale, i) in showLocales"
       :key="i"
@@ -7,7 +7,8 @@
     >
       {{ locale.name }}
     </nuxt-link>
-  </span>
+  </span> -->
+  <v-select :items="showLocales" label="languages"></v-select>
 </template>
 
 <script>

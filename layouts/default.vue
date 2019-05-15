@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <div class="website-container">
+    <div class="website-container website-data" :class="$mq">
       <website-nav-bar />
       <v-content class="website-content" :class="$mq">
         <nuxt />
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import WebsiteNavBar from '@/components/WebsiteNavBar'
+import WebsiteNavBar from '@/components/website/Navbar/WebsiteNavBar'
 import WebsiteFooter from '@/components/WebsiteFooter'
 
 export default {
@@ -24,11 +24,34 @@ export default {
 
 <style lang="stylus">
 .website-container {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
 }
 
+.website-data {
+  &.phone {
+    width: 100vw;
+    margin-left: 0vw;
+    margin-right: 0vw;
+  }
+
+  &.desktop {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
 .website-content {
-  min-height: 100vh;
+
+  &.phone {
+    margin-top: 15vh;
+    height: 85vh;
+  }
+
+  &.desktop {
+   margin-top: 10vh;
+   height: 90vh;
+  }
 }
 </style>

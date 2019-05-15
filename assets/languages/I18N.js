@@ -1,6 +1,7 @@
 const en = require('./en-GB.js')
 
 const I18N = {
+  seo: false, // fixes issue where initial page load doesn't have css loaded
   locales: [
     {
       name: 'English',
