@@ -7,7 +7,7 @@
         </v-card-title> -->
         <v-img
           class="white--text"
-          gradient="to bottom right, rgba(239, 36, 36, 0.4), rgba(255, 224, 0, 0.2)"
+          gradient="to bottom left, rgba(239, 36, 36, 0.5), rgba(255, 224, 0, 0.3)"
           min-height="60vh"
           src="website/bg.jpg"
         >
