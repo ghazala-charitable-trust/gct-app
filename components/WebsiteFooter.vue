@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark fluid height="auto" class="footer" :class="$mq">
+  <v-footer dark fluid height="auto" :class="$mq">
     <v-layout fluid class="pa-0 ma-0">
       <v-flex fluid>
         <v-card flat class="white--text text-xs-center">
@@ -45,14 +45,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-.footer {
-  &.phone {
-    margin-left: 30px;
-  }
-  &.desktop {
-    margin-left: 60px;
-  }
-}
-</style>
