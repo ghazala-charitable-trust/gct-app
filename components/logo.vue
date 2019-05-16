@@ -1,14 +1,15 @@
 <template>
-  <v-flex xs1 :class="config.class">
-    <v-card>
+  <div :class="config.class">
+    <v-card align-center>
       <v-img
-        src="https://source.unsplash.com/collection/789734/120x60"
         :height="config.height"
         :width="config.width"
+        alt="Logo"
+        :src="url"
         round
       ></v-img>
     </v-card>
-  </v-flex>
+  </div>
 </template>
 
 <script>
@@ -30,6 +31,9 @@ export default {
   computed: {
     config() {
       return this.$mq === 'phone' ? this.phone : this.desktop
+    },
+    url() {
+      return `https://source.unsplash.com/collection/789734/256z256`
     }
   }
 }

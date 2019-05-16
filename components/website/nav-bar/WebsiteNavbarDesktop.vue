@@ -4,7 +4,7 @@
       v-for="link in links"
       :key="link.name"
       :to="link.path"
-      :color="isActive(link.path) ? 'secondary' : 'black'"
+      :color="isActive(link.path) ? 'secondary' : link.color"
       class="hide-hover px-2 mx-2 my-2"
       nuxt
       flat

@@ -1,9 +1,14 @@
 <template>
-  <v-card :height="navHeight" class="website-container nav" :class="$mq">
+  <v-card
+    :height="navHeight"
+    class="website-container nav"
+    :class="$mq"
+    color="grey"
+  >
     <v-container fluid row class="px-0 py-2">
       <v-layout fluid class="ma-0 pa-0" align-center>
         <logo />
-        <v-layout fluid class="ma-0 pa-0" xs11 justify-end>
+        <v-layout fluid class="ma-0 pa-0" justify-end>
           <mq-layout mq="phone">
             <phone-nav-bar :links="links"></phone-nav-bar>
           </mq-layout>
@@ -33,27 +38,32 @@ export default {
         {
           name: 'Home',
           path: this.friendlyLink('index'),
-          icon: 'home'
+          icon: 'home',
+          color: 'black'
         },
         {
           name: 'About',
           path: this.friendlyLink('about'),
-          icon: 'info'
+          icon: 'info',
+          color: 'black'
         },
         {
           name: 'Goals',
           path: this.friendlyLink('goals'),
-          icon: 'bullseye'
+          icon: 'bullseye',
+          color: 'black'
         },
         {
           name: 'Advice',
           path: this.friendlyLink('advice'),
-          icon: 'balance-scale'
+          icon: 'balance-scale',
+          color: 'black'
         },
         {
           name: 'Donate',
           path: this.friendlyLink('donate'),
-          icon: 'donate'
+          icon: 'donate',
+          color: 'primary'
         }
       ]
     }
@@ -80,6 +90,8 @@ export default {
   background: linear-gradient(to left, $shades.red 0%, $shades.yellow 100%); */
   position: fixed;
   overflow: hidden;
+
+  border: 3px solid $shades.yellow !important;
 
   left: 0;
   top: 0;
