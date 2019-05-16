@@ -1,11 +1,26 @@
 <template>
   <v-app>
-    <div class="website" :class="$mq">
+    <!-- <div class="website" :class="$mq">
       <website-nav-bar />
       <div class="website-content website-container" :class="$mq">
         <nuxt />
       </div>
-    </div>
+    </div> -->
+    <v-content>
+      <v-container fluid fill-height class="pa-0 mx-0 mt-0 mb-3">
+        <website-nav-bar />
+        <div class="website-container website-content" :class="$mq">
+          <!-- <v-layout
+          fluid
+          fill-height
+          class="website-container pa-0 ma-0"
+          :class="$mq"
+        > -->
+          <nuxt />
+          <!-- </v-layout> -->
+        </div>
+      </v-container>
+    </v-content>
     <website-footer />
   </v-app>
 </template>
@@ -45,13 +60,14 @@ export default {
 .website-content {
 
   &.phone {
-    margin-top: 15vh;
-    height: 85vh;
+    margin-top: 70px;
+    height: auto;
   }
 
   &.desktop {
-   margin-top: 10vh;
-   height: 90vh;
+   margin-top: 100px;
+   height: auto;
   }
+
 }
 </style>

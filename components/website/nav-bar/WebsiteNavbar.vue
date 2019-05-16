@@ -1,5 +1,5 @@
 <template>
-  <v-card class="website-container nav" :class="$mq">
+  <v-card :height="navHeight" class="website-container nav" :class="$mq">
     <v-container fluid row class="px-0 py-2">
       <v-layout fluid class="ma-0 pa-0" align-center>
         <logo />
@@ -58,6 +58,11 @@ export default {
       ]
     }
   },
+  computed: {
+    navHeight() {
+      return this.$mq === 'phone' ? '70' : '100'
+    }
+  },
   methods: {
     friendlyLink(page) {
       return this.localePath(page)
@@ -74,6 +79,7 @@ export default {
   Chrome10-25,Safari5.1-6
   background: linear-gradient(to left, $shades.red 0%, $shades.yellow 100%); */
   position: fixed;
+  overflow: hidden;
 
   left: 0;
   top: 0;
