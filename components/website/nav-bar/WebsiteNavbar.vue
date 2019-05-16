@@ -1,5 +1,5 @@
 <template>
-  <div class="website-data nav color-me-red" :class="$mq">
+  <div class="website-data nav" :class="$mq">
     <v-container fluid row class="px-0 py-2">
       <v-layout fluid class="ma-0 pa-0" align-center>
         <logo />
@@ -18,8 +18,8 @@
 
 <script>
 import Logo from '@/components/logo'
-import DesktopNavBar from '@/components/website/Navbar/WebsiteNavbarDesktop'
-import PhoneNavBar from '@/components/website/Navbar/WebsiteNavbarPhone'
+import DesktopNavBar from '@/components/website/nav-bar/WebsiteNavbarDesktop'
+import PhoneNavBar from '@/components/website/nav-bar/WebsiteNavbarPhone'
 
 export default {
   components: {

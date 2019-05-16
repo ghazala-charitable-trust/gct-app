@@ -2,16 +2,16 @@
   <v-app>
     <div class="website-container website-data" :class="$mq">
       <website-nav-bar />
-      <v-content class="website-content" :class="$mq">
+      <div class="website-content" :class="$mq">
         <nuxt />
-      </v-content>
+      </div>
     </div>
     <website-footer />
   </v-app>
 </template>
 
 <script>
-import WebsiteNavBar from '@/components/website/Navbar/WebsiteNavBar'
+import WebsiteNavBar from '@/components/website/nav-bar/WebsiteNavBar'
 import WebsiteFooter from '@/components/WebsiteFooter'
 
 export default {
