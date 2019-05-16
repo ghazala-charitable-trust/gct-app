@@ -1,5 +1,5 @@
 <template>
-  <div class="website-data nav" :class="$mq">
+  <v-card class="website-container nav" :class="$mq">
     <v-container fluid row class="px-0 py-2">
       <v-layout fluid class="ma-0 pa-0" align-center>
         <logo />
@@ -13,7 +13,7 @@
         </v-layout>
       </v-layout>
     </v-container>
-  </div>
+  </v-card>
 </template>
 
 <script>

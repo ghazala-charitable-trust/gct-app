@@ -5,7 +5,7 @@
       :key="link.name"
       :to="link.path"
       :color="isActive(link.path) ? 'secondary' : 'black'"
-      class="px-2 mx-2 my-2"
+      class="hide-hover px-2 mx-2 my-2"
       nuxt
       flat
       depressed
@@ -40,5 +40,9 @@ export default {
 .nav-text {
   letter-spacing: 0.05em;
   font-size: 20px;
+}
+
+.hide-hover::before {
+  color: transparent
 }
 </style>

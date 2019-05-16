@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs1 class="pa-2">
+  <v-flex xs1 class="py-2 px-4">
     <v-card>
       <v-img
         src="https://source.unsplash.com/collection/789734/120x60"

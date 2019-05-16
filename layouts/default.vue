@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <div class="website-container website-data" :class="$mq">
+    <div class="website" :class="$mq">
       <website-nav-bar />
-      <div class="website-content" :class="$mq">
+      <div class="website-content website-container" :class="$mq">
         <nuxt />
       </div>
     </div>
@@ -23,12 +23,12 @@ export default {
 </script>
 
 <style lang="stylus">
-.website-container {
+.website {
   height: 100vh;
   position: relative;
 }
 
-.website-data {
+.website-container {
   &.phone {
     width: 100vw;
     margin-left: 0vw;
